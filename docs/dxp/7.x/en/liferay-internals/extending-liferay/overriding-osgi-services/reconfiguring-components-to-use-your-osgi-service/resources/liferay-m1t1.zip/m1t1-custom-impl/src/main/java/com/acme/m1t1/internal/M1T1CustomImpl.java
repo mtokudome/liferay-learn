@@ -1,15 +1,15 @@
-package overriding.service.reference.service;
+package com.acme.m1t1.internal;
 
-import override.my.service.reference.service.api.SomeService;
+import com.acme.m1t1.M1T1;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	immediate = true,
-	service = SomeService.class
+	service = M1T1.class
 )
-public class CustomServiceImpl implements SomeService {
+public class M1T1CustomImpl implements M1T1 {
 
 	@Override
 	public String doSomething() {
@@ -17,14 +17,14 @@ public class CustomServiceImpl implements SomeService {
 		StringBuilder sb = new StringBuilder();
 		sb.append(this.getClass().getName());
 		sb.append(", which delegates to ");
-		sb.append(_defaultService.doSomething());
+		sb.append(_M1T1.doSomething());
 
 		return sb.toString();
 	}
 
 	@Reference  (
 		unbind = "-",
-		target = "(component.name=override.my.service.reference.service.impl.SomeServiceImpl)"
+		target = "(component.name=com.acme.m1t1.internal.M1T1Impl)"
 	)
-	private SomeService _defaultService;
+	private M1T1 _M1T1;
 }

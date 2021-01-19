@@ -1,6 +1,6 @@
-package override.my.service.reference.portlet;
+package com.acme.m1t1;
 
-import override.my.service.reference.service.api.SomeService;
+import com.acme.m1t1.M1T1;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,9 +14,6 @@ import javax.portlet.RenderResponse;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-/**
- * @author jhinkey
- */
 @Component(
 	immediate = true,
 	property = {
@@ -27,7 +24,7 @@ import org.osgi.service.component.annotations.Reference;
 	},
 	service = Portlet.class
 )
-public class OverrideMyServiceReferencePortlet extends GenericPortlet {
+public class M1T1Portlet extends GenericPortlet {
 
 	@Override
 	protected void doView(RenderRequest request, RenderResponse response)
@@ -37,10 +34,10 @@ public class OverrideMyServiceReferencePortlet extends GenericPortlet {
 
 		printWriter.println("I'm calling a service ...<br>");
 		
-		printWriter.println(_someService.doSomething());
+		printWriter.println(_M1T1.doSomething());
 	}
 
 	@Reference (unbind = "-")
-	private SomeService _someService;
+	private M1T1 _M1T1;
 
 }
