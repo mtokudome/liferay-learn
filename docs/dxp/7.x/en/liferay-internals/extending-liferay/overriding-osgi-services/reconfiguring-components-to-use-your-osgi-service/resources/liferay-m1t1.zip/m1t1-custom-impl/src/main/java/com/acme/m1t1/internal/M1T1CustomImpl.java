@@ -5,21 +5,14 @@ import com.acme.m1t1.M1T1;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-@Component(immediate = true, service = M1T1.class)
+@Component(service = M1T1.class)
 public class M1T1CustomImpl implements M1T1 {
 
 	@Override
 	public String doSomething() {
 		StringBuilder sb = new StringBuilder();
 
-		M1T1CustomImpl cl = new M1T1CustomImpl();
-
-		Class<?> clClass = cl.getClass();
-
-		String className = clClass.getName();
-
-		sb.append(className);
-
+		sb.append("M1T1CustomImpl");
 		sb.append(", which delegates to ");
 		sb.append(_m1t1.doSomething());
 
