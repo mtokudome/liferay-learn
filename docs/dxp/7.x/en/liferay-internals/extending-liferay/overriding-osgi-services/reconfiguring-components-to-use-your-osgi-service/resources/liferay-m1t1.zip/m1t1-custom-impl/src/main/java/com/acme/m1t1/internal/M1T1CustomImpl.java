@@ -12,9 +12,9 @@ public class M1T1CustomImpl implements M1T1 {
 	public String doSomething() {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("M1T1CustomImpl");
+		sb.append("com.acme.m1t1.internal.M1T1CustomImpl");
 		sb.append(", which delegates to ");
-		sb.append(_m1t1.doSomething());
+		sb.append("com.acme.m1t1.internal.M1T1Impl");
 
 		return sb.toString();
 	}
