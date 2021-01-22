@@ -1,4 +1,6 @@
-package com.acme.m1t1;
+package com.acme.m1t1.web.internal.portlet;
+
+import com.acme.m1t1.M1T1;
 
 import java.io.IOException;
 import java.io.PrintWriter;
