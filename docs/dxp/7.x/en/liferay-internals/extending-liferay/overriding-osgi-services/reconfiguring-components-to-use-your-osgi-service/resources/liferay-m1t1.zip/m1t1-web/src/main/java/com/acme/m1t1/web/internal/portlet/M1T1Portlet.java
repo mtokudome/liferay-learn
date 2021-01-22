@@ -33,10 +33,10 @@ public class M1T1Portlet extends GenericPortlet {
 
 		printWriter.println("I'm calling a service ...<br>");
 
-		printWriter.println(_m1t1.doSomething());
+		printWriter.println(_m1T1.doSomething());
 	}
 
 	@Reference(unbind = "-")
-	private M1T1 _m1t1;
+	private M1T1 _m1T1;
 
 }

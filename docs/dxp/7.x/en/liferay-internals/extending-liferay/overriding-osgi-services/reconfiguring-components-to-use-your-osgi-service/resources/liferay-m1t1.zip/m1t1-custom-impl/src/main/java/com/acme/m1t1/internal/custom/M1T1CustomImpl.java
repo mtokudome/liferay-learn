@@ -1,4 +1,4 @@
-package com.acme.m1t1.internal;
+package com.acme.m1t1.internal.custom;
 
 import com.acme.m1t1.M1T1;
 
@@ -12,9 +12,9 @@ public class M1T1CustomImpl implements M1T1 {
 	public String doSomething() {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("com.acme.m1t1.internal.M1T1CustomImpl");
-		sb.append(", which delegates to ");
-		sb.append("com.acme.m1t1.internal.M1T1Impl");
+		sb.append(
+			"M1T1CustomImpl, which delegates to " +
+				_defaultService.doSomething());
 
 		return sb.toString();
 	}
@@ -23,6 +23,6 @@ public class M1T1CustomImpl implements M1T1 {
 		target = "(component.name=com.acme.m1t1.internal.M1T1Impl)",
 		unbind = "-"
 	)
-	private M1T1 _m1t1;
+	private M1T1 _defaultService;
 
 }
