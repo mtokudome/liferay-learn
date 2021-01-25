@@ -11,4 +11,9 @@ docs/**/liferay-????.zip/settings.gradle
 docs/**/liferay-????.zip/setup_tutorial.sh
 docs/**/liferay-????.zip/source-formatter-suppressions.xml
 docs/**/liferay-????.zip/.yo-rc.json
-node_modules
+node_modules.DS_Store
+.DS_Store
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
