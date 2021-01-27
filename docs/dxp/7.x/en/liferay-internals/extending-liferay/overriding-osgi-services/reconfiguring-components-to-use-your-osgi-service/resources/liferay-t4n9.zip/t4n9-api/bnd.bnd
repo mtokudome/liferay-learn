@@ -1,0 +1,4 @@
+Bundle-Name: Acme T4N9 API
+Bundle-SymbolicName: com.acme.t4n9.api
+Bundle-Version: 1.0.0
+Export-Package: com.acme.t4n9

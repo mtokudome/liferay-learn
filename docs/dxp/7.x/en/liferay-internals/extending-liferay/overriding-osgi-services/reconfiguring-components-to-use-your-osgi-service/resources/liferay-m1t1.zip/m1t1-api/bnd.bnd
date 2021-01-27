@@ -1,4 +1,0 @@
-Bundle-Name: Acme M1T1 API
-Bundle-SymbolicName: com.acme.m1t1.api
-Bundle-Version: 1.0.0
-Export-Package: com.acme.m1t1
