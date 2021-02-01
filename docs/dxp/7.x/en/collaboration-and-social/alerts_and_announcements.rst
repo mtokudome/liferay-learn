@@ -4,9 +4,17 @@ Alerts and Announcements
 .. toctree::
    :maxdepth: 2
 
-   04-alerts-and-announcements/user_guide.rst
-   04-alerts-and-announcements/developer_guide.rst
-   04-alerts-and-announcements/apis.rst
+   alerts-and-announcements/sending-alerts-and-announcements.md
+   alerts-and-announcements/developer_guide.rst
 
-.. include:: /collaboration-and-social/04-alerts-and-announcements/README.rst
-   :start-line: 2
+-  :doc:`/collaboration-and-social/alerts-and-announcements/sending-alerts-and-announcements`
+
+Developer Guide
+---------------
+
+Coming soon!
+
+APIs
+~~~~
+
+Coming soon!
