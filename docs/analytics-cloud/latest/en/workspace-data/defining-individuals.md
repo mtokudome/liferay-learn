@@ -1,3 +1,0 @@
-# Defining Individuals
-
-Coming soon!
