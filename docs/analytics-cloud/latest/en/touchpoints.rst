@@ -8,6 +8,7 @@ Touchpoints
    touchpoints/sites-dashboard.md
    touchpoints/pages.rst
    touchpoints/assets.rst
+   touchpoints/events.rst
 
 -  :doc:`/touchpoints/touchpoints`
 
@@ -26,3 +27,9 @@ Assets
 -  :doc:`/touchpoints/assets/forms`
 -  :doc:`/touchpoints/assets/documents-and-media`
 -  :doc:`/touchpoints/assets/tracking-custom-assets`
+
+Events
+------
+
+-  :doc:`/touchpoints/events/creating-events`
+-  :doc:`/touchpoints/events/analyzing-events`
