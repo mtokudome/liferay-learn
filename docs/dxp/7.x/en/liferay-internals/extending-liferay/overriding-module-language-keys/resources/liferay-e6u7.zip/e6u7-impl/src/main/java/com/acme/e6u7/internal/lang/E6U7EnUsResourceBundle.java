@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 
 import org.osgi.service.component.annotations.Component;
 
-@Component(property = "language.id=en_US", service = ResourceBundle.class)
+@Component(property = "language.id=en", service = ResourceBundle.class)
 public class E6U7EnUsResourceBundle extends ResourceBundle {
 
 	@Override
@@ -31,6 +31,6 @@ public class E6U7EnUsResourceBundle extends ResourceBundle {
 	}
 
 	private final ResourceBundle _resourceBundle = ResourceBundle.getBundle(
-		"content.Language_en_US", UTF8Control.INSTANCE);
+		"content.Language_en", UTF8Control.INSTANCE);
 
 }
