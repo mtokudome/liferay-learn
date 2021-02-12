@@ -1,0 +1,13 @@
+Bundle-Name: Acme E6U7 Implementation
+Bundle-SymbolicName: com.acme.e6u7.impl
+Bundle-Version: 1.0.0
+Provide-Capability:\
+	liferay.resource.bundle;\
+		resource.bundle.base.name="content.Language_en_US",\
+	liferay.resource.bundle;\
+		bundle.symbolic.name=com.liferay.blogs.web;\
+		resource.bundle.aggregate:String="(bundle.symbolic.name=com.acme.e6u7.internal.lang),\
+		(bundle.symbolic.name=com.liferay.blogs.web)";\
+		resource.bundle.base.name="content.Language_en_US";\
+		service.ranking:Long="1";\
+		servlet.context.name=blogs-web
