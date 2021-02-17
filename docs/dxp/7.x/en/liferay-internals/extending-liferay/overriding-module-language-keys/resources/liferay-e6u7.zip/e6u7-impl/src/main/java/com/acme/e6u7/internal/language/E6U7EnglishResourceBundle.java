@@ -1,4 +1,4 @@
-package com.acme.e6u7.internal.lang;
+package com.acme.e6u7.internal.language;
 
 import com.liferay.portal.kernel.language.UTF8Control;
 
@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 import org.osgi.service.component.annotations.Component;
 
 @Component(property = "language.id=en_US", service = ResourceBundle.class)
-public class E6U7EnUsResourceBundle extends ResourceBundle {
+public class E6U7EnglishResourceBundle extends ResourceBundle {
 
 	@Override
 	public Enumeration<String> getKeys() {
