@@ -1,0 +1,6 @@
+Bundle-Name: B6F5 Web
+Bundle-SymbolicName: com.liferay.blade.language.web
+Bundle-Version: 1.0.0
+Web-ContextPath: /language-web
+-liferay-aggregate-resource-bundles: com.liferay.blade.language.web
+-sources: true
