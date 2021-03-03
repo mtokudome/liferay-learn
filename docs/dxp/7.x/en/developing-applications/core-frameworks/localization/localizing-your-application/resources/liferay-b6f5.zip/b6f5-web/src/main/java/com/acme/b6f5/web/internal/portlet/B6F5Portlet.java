@@ -2,8 +2,6 @@ package com.acme.b6f5.web.internal.portlet;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 
 import org.osgi.service.component.annotations.Component;
@@ -22,10 +20,5 @@ import org.osgi.service.component.annotations.Component;
 	service = Portlet.class
 )
 public class B6F5Portlet extends MVCPortlet {
-
-	@Override
-	public void processAction(
-		ActionRequest actionRequest, ActionResponse actionResponse) {
-	}
 
 }
