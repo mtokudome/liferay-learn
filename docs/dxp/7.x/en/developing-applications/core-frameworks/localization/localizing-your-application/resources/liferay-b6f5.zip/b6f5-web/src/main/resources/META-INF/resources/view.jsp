@@ -8,7 +8,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <portlet:actionURL name="processAction" var="processActionURL" />
 
 <p>
-	<h1><liferay-ui:message key="b6f5-portlet-title" /></h1>
+	<h1><liferay-ui:message key="b6f5-portlet-welcome" /></h1>
 </p>
 
 <aui:form action="<%= processActionURL %>" method="post" name="fm">
