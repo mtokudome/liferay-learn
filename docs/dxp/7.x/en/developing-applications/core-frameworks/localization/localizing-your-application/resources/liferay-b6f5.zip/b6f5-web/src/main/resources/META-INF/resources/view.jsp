@@ -13,7 +13,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
 <aui:form action="<%= processActionURL %>" method="post" name="fm">
 	<aui:input label="Email" name="Email" value="">
-		<aui:validator errorMessage="b6f5-enter-valid-email" name="email" />
+		<aui:validator errorMessage="b6f5-please-enter-a-valid-email-address" name="email" />
 	</aui:input>
 
 	<aui:button-row>
