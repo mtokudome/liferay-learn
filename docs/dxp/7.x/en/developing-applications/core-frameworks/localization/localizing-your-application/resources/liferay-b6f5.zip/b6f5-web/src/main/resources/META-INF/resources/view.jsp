@@ -17,6 +17,6 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 	</aui:input>
 
 	<aui:button-row>
-		<aui:button type="submit" value="Submit" />
+		<aui:button type="submit" />
 	</aui:button-row>
 </aui:form>
