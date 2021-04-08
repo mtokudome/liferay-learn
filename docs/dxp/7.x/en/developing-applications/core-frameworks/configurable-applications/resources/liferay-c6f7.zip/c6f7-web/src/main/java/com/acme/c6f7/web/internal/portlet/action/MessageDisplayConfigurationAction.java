@@ -1,8 +1,8 @@
-package com.acme.c6f7.web.internal.portlet;
+package com.acme.c6f7.web.internal.portlet.action;
+
+import com.acme.c6f7.web.internal.configuration.MessageDisplayConfiguration;
 
 import com.liferay.portal.configuration.metatype.bnd.util.ConfigurableUtil;
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.ConfigurationAction;
 import com.liferay.portal.kernel.portlet.DefaultConfigurationAction;
 import com.liferay.portal.kernel.util.ParamUtil;
@@ -22,7 +22,7 @@ import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Modified;
 
 @Component(
-	configurationPid = "com.acme.c6f7.web.internal.portlet.MessageDisplayConfiguration",
+	configurationPid = "com.acme.c6f7.web.internal.configuration.MessageDisplayConfiguration",
 	configurationPolicy = ConfigurationPolicy.OPTIONAL,
 	property = "javax.portlet.name=C6F7Portlet",
 	service = ConfigurationAction.class

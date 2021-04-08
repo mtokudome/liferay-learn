@@ -7,8 +7,9 @@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
 taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
 taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
-<%@ page import="com.acme.c6f7.web.internal.portlet.MessageDisplayConfiguration" %><%@
-page import="com.liferay.petra.string.StringPool;" %><%@
+<%@ page import="com.acme.c6f7.web.internal.configuration.MessageDisplayConfiguration" %>
+
+<%@ page import="com.liferay.petra.string.StringPool" %><%@
 page import="com.liferay.portal.kernel.util.Validator" %>
 
 <liferay-theme:defineObjects />
@@ -23,7 +24,7 @@ String fontFamily = StringPool.BLANK;
 String fontColor = StringPool.BLANK;
 String fontSize = StringPool.BLANK;
 
-if (Validator.isNotNull(messageDisplayConfiguration)) {
+if (messageDisplayConfiguration != null) {
 	fontFamily = portletPreferences.getValue("fontFamily", messageDisplayConfiguration.fontFamily());
 	fontColor = portletPreferences.getValue("fontColor", messageDisplayConfiguration.fontColor());
 	fontSize = portletPreferences.getValue("fontSize", String.valueOf(messageDisplayConfiguration.fontSize()));
@@ -37,7 +38,7 @@ if (Validator.isNotNull(messageDisplayConfiguration)) {
 		/>
 	</c:when>
 	<c:otherwise>
-		<p style="font-family: <%= fontFamily %>; color: <%= fontColor %>; font-size: <%= fontSize %>">
+		<p style="font-family: <%= fontFamily %>; color: <%= fontColor %>; font-size: <%= fontSize %>pt;">
 			<liferay-ui:message
 				key="c6f7-porlet-welcome"
 			/>

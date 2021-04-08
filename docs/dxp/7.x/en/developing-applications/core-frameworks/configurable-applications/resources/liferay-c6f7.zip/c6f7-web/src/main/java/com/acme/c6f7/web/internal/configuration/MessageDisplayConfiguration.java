@@ -1,9 +1,9 @@
-package com.acme.c6f7.web.internal.portlet;
+package com.acme.c6f7.web.internal.configuration;
 
 import aQute.bnd.annotation.metatype.Meta;
 
 @Meta.OCD(
-	id = "com.acme.c6f7.web.internal.portlet.MessageDisplayConfiguration"
+	id = "com.acme.c6f7.web.internal.configuration.MessageDisplayConfiguration"
 )
 public interface MessageDisplayConfiguration {
 
