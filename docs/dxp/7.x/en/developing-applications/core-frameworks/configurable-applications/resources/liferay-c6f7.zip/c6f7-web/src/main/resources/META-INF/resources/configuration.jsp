@@ -6,8 +6,7 @@
 
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %><%@
 taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
-taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
-taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
 
 <%@ page import="com.acme.c6f7.web.internal.portlet.MessageDisplayConfiguration" %><%@
 page import="com.liferay.petra.string.StringPool;" %><%@
@@ -25,7 +24,7 @@ String fontFamily = StringPool.BLANK;
 String fontColor = StringPool.BLANK;
 String fontSize = StringPool.BLANK;
 
-if (Validator.isNotNull(messageDisplayConfiguration)) {
+if (messageDisplayConfiguration != null) {
 	fontFamily = portletPreferences.getValue("fontFamily", messageDisplayConfiguration.fontFamily());
 	fontColor = portletPreferences.getValue("fontColor", messageDisplayConfiguration.fontColor());
 	fontSize = portletPreferences.getValue("fontSize", String.valueOf(messageDisplayConfiguration.fontSize()));
