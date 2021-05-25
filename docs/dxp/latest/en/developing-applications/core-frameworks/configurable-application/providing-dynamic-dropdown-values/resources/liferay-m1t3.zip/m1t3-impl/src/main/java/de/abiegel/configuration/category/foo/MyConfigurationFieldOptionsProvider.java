@@ -1,4 +1,4 @@
-package com.acme.z4h3.internal.configuration;
+package de.abiegel.configuration.category.foo;
 
 import com.liferay.asset.auto.tagger.text.extractor.TextExtractor;
 import com.liferay.asset.auto.tagger.text.extractor.TextExtractorTracker;
@@ -17,12 +17,12 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {
-		"configuration.field.name=entryList2",
-		"configuration.pid=com.acme.z4h3.internal.configuration.Z4H3Configuration"
+		"configuration.field.name=entryList",
+		"configuration.pid=de.abiegel.configuration.osgi.company.CompanyConfiguredComponentConfig"
 	},
 	service = ConfigurationFieldOptionsProvider.class
 )
-public class Z4H3ConfigurationFieldOptionsProvider
+public class MyConfigurationFieldOptionsProvider
 	implements ConfigurationFieldOptionsProvider {
 
 	@Override

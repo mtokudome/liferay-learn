@@ -1,0 +1,3 @@
+Bundle-Name: Acme M1T3 Impl
+Bundle-SymbolicName: com.acme.m1t3.impl
+Bundle-Version: 1.0.0
