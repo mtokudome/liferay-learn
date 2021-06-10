@@ -15,5 +15,6 @@ Definitions
 -----------
 
 -  :doc:`/workspace-data/definitions/definitions-for-individuals`
+-  :doc:`/workspace-data/definitions/definitions-for-events`
 -  :doc:`/workspace-data/definitions/setting-a-search-query`
 -  :doc:`/workspace-data/definitions/managing-interest-topics`
