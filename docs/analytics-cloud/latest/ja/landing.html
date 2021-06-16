@@ -1,0 +1,163 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					icon: '#getting-started-logo',
+					sectionName: 'Analytics Cloudへようこそ',
+					sectionURL: 'getting-started/quick-tour/welcome-to-analytics-cloud.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '新しいワークスペースにサインアップする',
+							url: 'getting-started/quick-tour/signing-up-for-a-new-workspace.html'
+						},
+						{
+							name: 'データソースの管理',
+							url: 'getting-started/connecting-data-sources/managing-data-sources.html'
+						},
+						{
+							name: 'Liferay DXPとAnalytics Cloudの接続',
+							url: 'getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html'
+						}
+					]
+				},
+				{
+					icon: '#system-administration-logo',
+					sectionName: 'タッチポイント アナリティクス データ',
+					sectionURL: 'touchpoints/touchpoints.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ページ',
+							url: 'touchpoints/pages/pages.html'
+						},
+						{
+							name: 'Paths',
+							url: 'touchpoints/pages/paths.html'
+						},
+						{
+							name: 'アセット',
+							url: 'touchpoints/assets/assets.html'
+						},
+					]
+				},
+				{
+					icon: '#users-and-permissions-logo',
+					sectionName: 'オーディエンスの理解',
+					sectionURL: 'people/understanding-your-audience.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Individuals Dashboard',
+							url: 'people/individuals/individuals-dashboard.html'
+						},
+						{
+							name: 'Accounts',
+							url: 'people/accounts/accounts.html'
+						},
+						{
+							name: 'セグメント',
+							url: 'people/segments/segments.html'
+						},
+					]
+				},
+				{
+					icon: '#manage-and-optimize-logo',
+					sectionName: '最適化',
+					sectionURL: 'optimization.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'A/Bテスト',
+							url: 'optimization/a-b-testing.html'
+						},
+						{
+							name: 'コンテンツレコメンデーションAPI',
+							url: 'optimization/content-recommendation-api.html'
+						},
+					]
+				},
+				{
+					icon: '#developing-applications-logo',
+					sectionName: 'API',
+					sectionURL: 'apis/apis.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '認証',
+							url: 'apis/authentication.html'
+						},
+						{
+							name: 'データのクエリ',
+							url: 'apis/querying-data.html'
+						},
+						{
+							name: 'データのエクスポート',
+							url: 'apis/exporting-data.html'
+						},
+					]
+				},
+				{
+					icon: '#site-building-logo',
+					sectionName: 'Workspace Data',
+					sectionURL: 'workspace_data.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'APIの管理',
+							url: 'workspace-data/managing-apis.html'
+						},
+						{
+							name: '定義の管理',
+							url: 'workspace-data/managing-definitions.html'
+						},
+						{
+							name: 'データ管理とプライバシー',
+							url: 'workspace-data/data-control-and-privacy.html'
+						},
+					]
+				},
+				{
+					icon: '#installation-and-upgrades-logo',
+					sectionName: 'ワークスペースの設定',
+					sectionURL: 'workspace_settings.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ユーザーの管理',
+							url: 'workspace-settings/managing-users.html'
+						},
+						{
+							name: 'プロパティの管理',
+							url: 'workspace-settings/managing-properties.html'
+						},
+						{
+							name: '使用量の追跡',
+							url: 'workspace-settings/tracking-usage.html'
+						},
+					]
+				},
+				{
+					icon: '#building-solutions-on-dxp-logo',
+					sectionName: 'トラブルシューティング',
+					sectionURL: 'troubleshooting.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'データソースの接続',
+							url: 'troubleshooting/connecting-data-sources.html'
+						},
+						{
+							name: 'アクティベーション',
+							url: 'troubleshooting/activation.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>
