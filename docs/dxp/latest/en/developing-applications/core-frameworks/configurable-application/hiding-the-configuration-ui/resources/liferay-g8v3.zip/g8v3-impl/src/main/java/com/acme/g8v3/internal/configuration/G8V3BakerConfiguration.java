@@ -1,9 +1,13 @@
-package com.acme.g8v3.baker.internal.configuration;
+package com.acme.g8v3.internal.configuration;
 
 import aQute.bnd.annotation.metatype.Meta;
 
+import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
+
+//@ExtendedObjectClassDefinition(generateUI=false)
+
 @Meta.OCD(
-	id = "com.acme.g8v3.baker.internal.configuration.G8V3BakerConfiguration",
+	id = "com.acme.g8v3.internal.configuration.G8V3BakerConfiguration",
 	localization = "content/Language", name = "g8v3-baker-configuration-name"
 )
 public interface G8V3BakerConfiguration {

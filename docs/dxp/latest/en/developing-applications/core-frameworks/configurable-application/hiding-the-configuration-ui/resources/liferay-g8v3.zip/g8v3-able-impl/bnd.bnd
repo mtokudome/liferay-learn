@@ -1,4 +1,0 @@
-Bundle-Name: Acme G8V3 Able Implementation
-Bundle-SymbolicName: com.acme.g8v3.able.impl
-Bundle-Version: 1.0.0
-Export-Package: com.acme.g8v3.able.internal.configuration
