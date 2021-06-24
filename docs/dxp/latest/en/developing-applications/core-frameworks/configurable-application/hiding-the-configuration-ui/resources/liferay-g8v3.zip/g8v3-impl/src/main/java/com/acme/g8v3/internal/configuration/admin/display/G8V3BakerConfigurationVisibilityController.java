@@ -29,7 +29,7 @@ public class G8V3BakerConfigurationVisibilityController
 		public boolean isVisible(
 			ExtendedObjectClassDefinition.Scope scope, Serializable scopePK) {
 
-			return !g8v3AbleConfiguration.hideAdvancedSettings();
+				return !g8v3AbleConfiguration.hideBakerConfiguration();
 
 		}
 
@@ -40,7 +40,6 @@ public class G8V3BakerConfigurationVisibilityController
 				G8V3AbleConfiguration.class, properties);
 		}
 
-		@Reference
 		private G8V3AbleConfiguration g8v3AbleConfiguration;
 
 }
