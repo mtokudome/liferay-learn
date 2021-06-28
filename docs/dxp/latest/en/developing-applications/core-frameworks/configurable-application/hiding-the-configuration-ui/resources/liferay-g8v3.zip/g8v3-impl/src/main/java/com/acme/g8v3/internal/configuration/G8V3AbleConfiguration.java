@@ -8,7 +8,10 @@ import aQute.bnd.annotation.metatype.Meta;
 )
 public interface G8V3AbleConfiguration {
 
-	@Meta.AD(deflt="false", name="hide-baker-configuration", required = false)
-	public boolean hideBakerConfiguration();
+	@Meta.AD(
+		deflt = "false", name = "enable-g8v3-baker-configuration",
+		required = false
+	)
+	public boolean enableG8V3BakerConfiguration();
 
 }
