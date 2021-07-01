@@ -21,26 +21,22 @@ import org.osgi.service.component.annotations.Reference;
 public class G8V3BakerConfigurationVisibilityController
 	implements ConfigurationVisibilityController {
 
-	public boolean isG8V3BakerConfigurationEnabled() {
+	@Override
+	public boolean isVisible(
+		ExtendedObjectClassDefinition.Scope scope, Serializable scopePK) {
+
 		try {
-			_g8v3AbleConfiguration =
+			G8V3AbleConfiguration g8v3AbleConfiguration =
 				_configurationProvider.getSystemConfiguration(
 					G8V3AbleConfiguration.class);
+
+			return g8v3AbleConfiguration.enableG8V3BakerConfiguration();
 		}
 		catch (ConfigurationException configurationException) {
 			_log.error(configurationException, configurationException);
 
 			return false;
 		}
-
-		return _g8v3AbleConfiguration.enableG8V3BakerConfiguration();
-	}
-
-	@Override
-	public boolean isVisible(
-		ExtendedObjectClassDefinition.Scope scope, Serializable scopePK) {
-
-		return isG8V3BakerConfigurationEnabled();
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(
@@ -48,7 +44,5 @@ public class G8V3BakerConfigurationVisibilityController
 
 	@Reference
 	private ConfigurationProvider _configurationProvider;
-
-	private G8V3AbleConfiguration _g8v3AbleConfiguration;
 
 }
