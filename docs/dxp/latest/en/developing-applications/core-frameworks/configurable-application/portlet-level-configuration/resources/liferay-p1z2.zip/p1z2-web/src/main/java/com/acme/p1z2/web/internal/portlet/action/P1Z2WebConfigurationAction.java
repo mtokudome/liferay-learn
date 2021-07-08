@@ -2,12 +2,14 @@ package com.acme.p1z2.web.internal.portlet.action;
 
 import com.acme.p1z2.web.internal.configuration.P1Z2WebConfiguration;
 
-import com.liferay.portal.configuration.metatype.bnd.util.ConfigurableUtil;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.ConfigurationAction;
 import com.liferay.portal.kernel.portlet.DefaultConfigurationAction;
+import com.liferay.portal.kernel.theme.PortletDisplay;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.ParamUtil;
-
-import java.util.Map;
+import com.liferay.portal.kernel.util.WebKeys;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
@@ -16,10 +18,8 @@ import javax.portlet.PortletConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
-import org.osgi.service.component.annotations.Modified;
 
 @Component(
 	configurationPid = "com.acme.p1z2.web.internal.configuration.P1Z2WebConfiguration",
@@ -35,8 +35,23 @@ public class P1Z2WebConfigurationAction extends DefaultConfigurationAction {
 			HttpServletResponse httpServletResponse)
 		throws Exception {
 
-		httpServletRequest.setAttribute(
-			P1Z2WebConfiguration.class.getName(), _p1z2WebConfiguration);
+		ThemeDisplay themeDisplay =
+			(ThemeDisplay)httpServletRequest.getAttribute(
+				WebKeys.THEME_DISPLAY);
+
+		PortletDisplay portletDisplay = themeDisplay.getPortletDisplay();
+
+		try {
+			P1Z2WebConfiguration p1z2WebConfiguration =
+				portletDisplay.getPortletInstanceConfiguration(
+					P1Z2WebConfiguration.class);
+
+			httpServletRequest.setAttribute(
+				P1Z2WebConfiguration.class.getName(), p1z2WebConfiguration);
+		}
+		catch (Exception exception) {
+			_log.error(exception, exception);
+		}
 
 		super.include(portletConfig, httpServletRequest, httpServletResponse);
 	}
@@ -55,13 +70,7 @@ public class P1Z2WebConfigurationAction extends DefaultConfigurationAction {
 		super.processAction(portletConfig, actionRequest, actionResponse);
 	}
 
-	@Activate
-	@Modified
-	protected void activate(Map<Object, Object> properties) {
-		_p1z2WebConfiguration = ConfigurableUtil.createConfigurable(
-			P1Z2WebConfiguration.class, properties);
-	}
-
-	private volatile P1Z2WebConfiguration _p1z2WebConfiguration;
+	private static final Log _log = LogFactoryUtil.getLog(
+		P1Z2WebConfigurationAction.class);
 
 }

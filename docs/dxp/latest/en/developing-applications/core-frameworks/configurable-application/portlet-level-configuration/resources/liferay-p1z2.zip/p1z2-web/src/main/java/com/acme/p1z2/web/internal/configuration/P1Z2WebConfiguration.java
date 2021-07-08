@@ -4,9 +4,7 @@ import aQute.bnd.annotation.metatype.Meta;
 
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
 
-@ExtendedObjectClassDefinition(
-	category = "p1z2", scope = ExtendedObjectClassDefinition.Scope.COMPANY
-)
+@ExtendedObjectClassDefinition(category = "p1z2")
 @Meta.OCD(
 	id = "com.acme.p1z2.web.internal.configuration.P1Z2WebConfiguration",
 	localization = "content/Language", name = "p1z2-configuration-name"

@@ -14,43 +14,24 @@ page import="com.liferay.portal.kernel.util.Constants" %>
 <portlet:defineObjects />
 
 <%
-P1Z2WebConfiguration p1z2WebConfiguration = (P1Z2WebConfiguration)renderRequest.getAttribute(P1Z2WebConfiguration.class.getName());
 String favoriteFruit = StringPool.BLANK;
+P1Z2WebConfiguration p1z2WebConfiguration = (P1Z2WebConfiguration)renderRequest.getAttribute(P1Z2WebConfiguration.class.getName());
 
 if (p1z2WebConfiguration != null) {
 	favoriteFruit = portletPreferences.getValue("favoriteFruit", p1z2WebConfiguration.favoriteFruit());
 }
 %>
 
-<liferay-portlet:actionURL
-	portletConfiguration="<%= true %>"
-	var="configurationActionURL"
-/>
+<liferay-portlet:actionURL portletConfiguration="<%= true %>" var="configurationActionURL" />
 
-<liferay-portlet:renderURL
-	portletConfiguration="<%= true %>"
-	var="configurationRenderURL"
-/>
+<liferay-portlet:renderURL portletConfiguration="<%= true %>" var="configurationRenderURL" />
 
 <aui:form action="<%= configurationActionURL %>" method="post" name="fm">
-	<aui:input
-		name="<%= Constants.CMD %>"
-		type="hidden"
-		value="<%= Constants.UPDATE %>"
-	/>
-
-	<aui:input
-		name="redirect"
-		type="hidden"
-		value="<%= configurationRenderURL %>"
-	/>
+	<aui:input name="<%= Constants.CMD %>" type="hidden" value="<%= Constants.UPDATE %>" />
+	<aui:input name="redirect" type="hidden" value="<%= configurationRenderURL %>" />
 
 	<aui:fieldset>
-		<aui:select
-			label="Favorite Fruit"
-			name="favoriteFruit"
-			value="<%= favoriteFruit %>"
-		>
+		<aui:select label="Favorite Fruit" name="favoriteFruit" value="<%= favoriteFruit %>">
 			<aui:option value="apple">apple</aui:option>
 			<aui:option value="banana">banana</aui:option>
 			<aui:option value="orange">orange</aui:option>
